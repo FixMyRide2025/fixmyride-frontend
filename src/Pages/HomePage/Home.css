@@ -337,7 +337,7 @@ body, html {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   background: none;
   color: #fff;
   border-radius: 16px;
@@ -361,7 +361,8 @@ body, html {
   position: relative;
   z-index: 2;
   max-width: 440px;
-  margin-left: 70px;
+  margin-left: 48px;
+  margin-right: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;

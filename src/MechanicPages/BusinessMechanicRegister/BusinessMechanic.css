@@ -159,15 +159,15 @@ body, html, * {
   display: flex;
   gap: 8px;
   width: 100%;
-  max-width: 485px;
+  max-width: 456px;
 }
 
 .country-code {
-  padding: 14px 16px;
+  padding: 10px 14px;
   border: 1.5px solid #8692A6;
   border-radius: 8px;
   background: #fff;
-  font-size: 16px;
+  font-size: 15px;
   width: 100px; /* Adjust the width to fit the layout */
 }
 
@@ -427,7 +427,7 @@ body, html, * {
   margin-top: 2px;
   margin-bottom: 2px;
   transition: border 0.2s;
-  max-width: 485px;
+  max-width: 450px;
   width: 100%;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -654,7 +654,7 @@ body, html, * {
   z-index: 1001;
   min-width: 340px;
   max-width: 90vw;
-  height: 300px;
+  height: 350px;
   text-align: center;
 }
 .modal-logo-row {

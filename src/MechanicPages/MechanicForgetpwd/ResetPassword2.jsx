@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import PasswordIcon from "../../assets/Password.svg";
 import "./ForgetPwd.css"; 
 
-const ResetPassword3 = () => {
+const ResetPassword2 = () => {
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [error, setError] = useState("");
@@ -15,7 +15,7 @@ const ResetPassword3 = () => {
       <div className="forget-container">
         {/* Back link */}
         <div className="forget-header-row">
-          <Link to="/forgetpwd2" className="mechanic-back-link">
+          <Link to="/forgetpwd1" className="mechanic-back-link">
             <span className="mechanic-back-icon">&#8592;</span> Go back
           </Link>
         </div>
@@ -31,7 +31,7 @@ const ResetPassword3 = () => {
             return;
           }
           setError("");
-          navigate("/successfullyreset");
+          navigate("/successfullyreset1");
         }}>
 
           <label className="forget-label" htmlFor="new-password">Enter new password</label>
@@ -91,4 +91,4 @@ const ResetPassword3 = () => {
   );
 };
 
-export default ResetPassword3;
+export default ResetPassword2;

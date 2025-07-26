@@ -25,6 +25,8 @@ import ForgetPwd1 from "./Pages/ForgetPassword/ForgetPwd1";
 import ForgetPwd2 from "./Pages/ForgetPassword/ForgetPwd2";
 import ResetPassword3 from "./Pages/ForgetPassword/ResetPassword3";
 import SuccessfullyReset from "./Pages/ForgetPassword/SuccessfullyReset";
+import SuccessfullyReset1 from "./MechanicPages/MechanicForgetpwd/SuccessfullyReset1";
+import ForgetPwd from "./MechanicPages/MechanicForgetpwd/ForgetPwd";
 
 function MainApp() {
   return (
@@ -52,9 +54,12 @@ function MainApp() {
         <Route path="/businessregister3" element={<BusinessRegister3 />} />
         <Route path="/businessregister4" element={<BusinessRegister4 />} />
         <Route path="/forgetpwd1" element={<ForgetPwd1 />} />
+        <Route path="/mechanic-forgetpwd1" element={<ForgetPwd1 />} />
         <Route path="/forgetpwd2" element={<ForgetPwd2 />} />
         <Route path="/resetpassword3" element={<ResetPassword3 />} />
-        <Route path="/successfullyreset" element={<SuccessfullyReset />} />
+        <Route path="/successfullyreset" element={<SuccessfullyReset1 />} />
+        <Route path="/mechanic-successfullyreset" element={<SuccessfullyReset1 />} />
+        <Route path="/mechanic-forgetpwd" element={<ForgetPwd />} />
       </Routes>
     </BrowserRouter>
   );

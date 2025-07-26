@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ForgetPwd.css";
 
-const ForgetPwd1 = () => {
+const ForgetPwd = () => {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div className="forget-outer-center">
       <div className="forget-container">
         {/* Back link */}
         <div className="forget-header-row">
-          <Link to="/login" className="mechanic-back-link">
+          <Link to="/mechanic-login" className="mechanic-back-link">
             <span className="mechanic-back-icon">&#8592;</span> Go back
           </Link>
         </div>
@@ -18,7 +19,7 @@ const ForgetPwd1 = () => {
         <form className="forget-form" onSubmit={(e) => {
           e.preventDefault();
           if (email.trim()) {
-            window.location.href = '/forgetpwd2';
+            navigate('/forgetpwd1');
           }
         }}>
           <label htmlFor="email" className="forget-label">Enter your Email</label>
@@ -40,4 +41,4 @@ const ForgetPwd1 = () => {
   );
 };
 
-export default ForgetPwd1;
+export default ForgetPwd;

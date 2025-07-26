@@ -147,7 +147,7 @@
   margin-top: 0;
   outline: none;
   transition: border 0.2s;
-  max-width: 400px;
+  max-width: 440px;
   width: 100%;
 }
 
@@ -188,7 +188,7 @@
   margin-top: 8px;
   cursor: pointer;
   transition: background 0.2s;
-  max-width: 450px;
+  max-width: 448px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -206,8 +206,23 @@
   justify-content: center;
   color: #bdbdbd;
   font-size: 0.95rem;
-  margin-top: 8px;
+  margin-top: 18px;
+  margin-bottom: 0;
   gap: 6px;
+  width: 448px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.business-desc-divider {
+  border: none;
+  border-top: 1.5px solid #e6e8ec;
+  margin-bottom: 24px;
+  margin-left: 50px;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Container for input and button */

@@ -7,23 +7,38 @@ const BusinessRegister1 = () => {
   const [form, setForm] = useState({
     company: "",
     email: "",
+    phoneCountry: "+94",
     phone: "",
     regNumber: "",
     password: "",
     confirmPassword: "",
-    agree: false,
   });
 
-  const handleChange = e => {
-    const { name, value, type, checked } = e.target;
-    setForm(prev => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((p) => ({ ...p, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (form.password !== form.confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    localStorage.setItem(
+      "biz_step1",
+      JSON.stringify({
+        company: form.company,
+        email: form.email,
+        phoneCountry: form.phoneCountry,
+        phone: form.phone,
+        regNumber: form.regNumber,
+        password: form.password,
+      })
+    );
+
     navigate("/businessregister2");
   };
 
@@ -47,14 +62,17 @@ const BusinessRegister1 = () => {
           </div>
         </div>
       </div>
+
       <div className="register-right">
         <div className="register-top-row">
-        <Link to="/mechanic-register" className="register-back-link">&lt; Back</Link>
-        <span className="register-step">STEP 01/04<br/>Personal Info.</span>
-      </div>
+          <Link to="/mechanic-register" className="register-back-link">&lt; Back</Link>
+          <span className="register-step">STEP 01/04<br/>Business Info.</span>
+        </div>
+
         <h1 className="register-title">Register Business Account!</h1>
         <p className="register-desc">For the purpose of industry regulation, your details are required.</p>
         <hr className="business-desc-divider" />
+
         <form className="business-form" onSubmit={handleSubmit}>
           <label>
             Company name*
@@ -67,6 +85,7 @@ const BusinessRegister1 = () => {
               required
             />
           </label>
+
           <label>
             Email address*
             <input
@@ -78,13 +97,17 @@ const BusinessRegister1 = () => {
               required
             />
           </label>
+
           <label>
             Phone number*
             <div className="phone-row">
-              <select className="country-code">
+              <select
+                className="country-code"
+                name="phoneCountry"
+                value={form.phoneCountry}
+                onChange={handleChange}
+              >
                 <option value="+94">+94</option>
-                <option value="+1">+1</option>
-                {/* Add more country codes as needed */}
               </select>
               <input
                 type="text"
@@ -96,6 +119,7 @@ const BusinessRegister1 = () => {
               />
             </div>
           </label>
+
           <label>
             Business registration number*
             <input
@@ -107,6 +131,7 @@ const BusinessRegister1 = () => {
               required
             />
           </label>
+
           <label>
             Create password*
             <input
@@ -118,6 +143,7 @@ const BusinessRegister1 = () => {
               required
             />
           </label>
+
           <label>
             Re enter password*
             <input
@@ -129,21 +155,8 @@ const BusinessRegister1 = () => {
               required
             />
           </label>
-          <div className="checkbox-row">
-            <input
-              type="checkbox"
-              name="agree"
-              checked={form.agree}
-              onChange={handleChange}
-              id="agree"
-            />
-            <label htmlFor="agree">I agree to terms & conditions</label>
-          </div>
+
           <button className="register-btn" type="submit">Register Account</button>
-         <button className="google-btn" type="button">
-          <img src="/src/assets/Google.svg" alt="Google Icon" className="google-icon" />
-          Register with Google
-          </button>
         </form>
       </div>
     </div>

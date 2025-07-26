@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./ForgetPwd.css";
 
-const ForgetPwd2 = () => {
+const ForgetPwd1 = () => {
   const inputs = [useRef(), useRef(), useRef(), useRef()];
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [error, setError] = useState("");
@@ -26,7 +26,7 @@ const ForgetPwd2 = () => {
       <div className="forget-container">
         {/* Back link */}
         <div className="forget-header-row">
-          <Link to="/forgetpwd1" className="mechanic-back-link">
+          <Link to="/forgetpwd" className="mechanic-back-link">
             <span className="mechanic-back-icon">&#8592;</span> Go back
           </Link>
         </div>
@@ -39,7 +39,7 @@ const ForgetPwd2 = () => {
             return;
           }
           setError("");
-          navigate("/resetpassword3");
+          navigate("/resetpassword2");
         }}>
           <div className="forget-otp-row">
             {[0,1,2,3].map((i) => (
@@ -71,4 +71,4 @@ const ForgetPwd2 = () => {
   );
 };
 
-export default ForgetPwd2;
+export default ForgetPwd1;

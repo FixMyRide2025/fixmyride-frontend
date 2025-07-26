@@ -60,15 +60,31 @@ const UserRegister = () => {
         <div className="login-divider">
           <span>Or</span>
         </div>
-        <div className="login-social">
-          <button type="button" className="social-btn google" aria-label="Google">
-            <img src="/src/assets/Google.svg" alt="Google" />
-          </button>
-          <button type="button" className="social-btn facebook" aria-label="Facebook">
-            <img src="/src/assets/Facebook.svg" alt="Facebook" />
-          </button>
-          <button type="button" className="social-btn apple" aria-label="Apple">
-            <img src="/src/assets/Apple.svg" alt="Apple" />
+        <div className="login-social" style={{ justifyContent: 'center' }}>
+          <button
+            type="button"
+            className="register-google-btn"
+            aria-label="Sign in with Google"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              background: '#4285F4',
+              border: 'none',
+              borderRadius: '14px',
+              padding: '0 24px',
+              height: '45px',
+              width: '260px',
+              width: '260px',
+              cursor: 'pointer',
+              boxShadow: 'none',
+              outline: 'none',
+              margin: '0 auto',
+              fontFamily: 'inherit',
+              fontWeight: 500
+            }}
+          >
+            <img src="/src/assets/Google.svg" alt="Google" style={{ width: '24px', height: '24px', marginRight: '12px' }} />
+            <span style={{ color: '#fff', fontSize: '1rem', fontWeight: 500 }}>Sign in with Google</span>
           </button>
         </div>
         <div className="login-signup">

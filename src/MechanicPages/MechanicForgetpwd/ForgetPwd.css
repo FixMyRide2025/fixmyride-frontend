@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+body, html, * {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+/* Title of the form */
+.forget-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Form structure */
+.forget-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.forget-label {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  gap: 50px;
+  align-self: flex-start;
+}
+
+.forget-input {
+  width: 270px;
+  font-size: 1.1rem;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  background: #000;
+  color: #fff;
+  margin-bottom: 28px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.forget-input:focus {
+  border: 2px solid #5a7cfb;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Continue button styling */
+.forget-continue-btn {
+  width: 100%;
+  background: #3279F5;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(90,124,251,0.10);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forget-continue-btn:hover {
+  background: #3050b1;
+}
+
+/* OTP Verification Styles */
+.forget-otp-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px 0 32px 0;
+}
+
+.forget-otp-input {
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 1px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+.forget-otp-input:focus {
+  box-shadow: 0 0 0 2px #5c7cfa;
+}
+
+.forget-desc {
+  color: #bdbdbd;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+/* Ensure the outer container is set up for centering content */
+.forget-outer-center {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  position: relative; /* Keep this as relative */
+}
+
+/* Back link at the top left corner */
+.forget-header-row {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mechanic-back-link {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mechanic-back-link:hover {
+  color: #5a7cfb;
+}
+
+.mechanic-back-icon {
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
+/* Password input row and icon */
+
+.forget-password-input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: transparent;
+  height: 56px;
+  width: 100%;
+  max-width: 500px;
+}
+
+
+.forget-password-input-row .forget-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 0 8px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  margin-left: 10px;
+  outline: none;
+  box-shadow: none;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+}
+
+/* .forget-input:focus {
+  border: 2px solid #5a7cfb;
+} */
+
+.forget-password-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.forget-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.forget-label {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+
+.forget-continue-btn {
+  width: 100%;
+  background: #3279F5;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(90,124,251,0.10);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forget-continue-btn:hover {
+  background: #3252b2;
+}
+
+.forget-outer-center {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+.input-divider {
+  width: 2px;
+  height: 28px;
+  background: #fff;
+  margin: 0 12px 0 10px;
+  border-radius: 1px;
+  display: inline-block;
+}
+.reset-input {
+  width: 270px;
+  font-size: 1.1rem;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  background: #000;
+  color: #fff;
+  margin-bottom: 28px;
+
+}
+
+.reset-input:focus {
+  border: 2px solid #5a7cfb;
+  outline: none;
+  box-shadow: none;
+}
+
+/* --- Responsive Design: Mobile Media Queries --- */
+@media (max-width: 700px) {
+  .forget-outer-center {
+    padding: 0 0.5rem;
+    min-height: 100vh;
+    width: 100vw;
+    align-items: stretch;
+  }
+  .forget-form {
+    max-width: 100vw;
+    padding: 0 0.5rem;
+  }
+  .forget-title {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+  .forget-label {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  .forget-input, .reset-input {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 8px 10px;
+    margin-bottom: 18px;
+  }
+  .forget-continue-btn {
+    font-size: 1rem;
+    padding: 10px 0;
+    border-radius: 6px;
+  }
+  .forget-password-input-row {
+    max-width: 100vw;
+    padding: 0 4px;
+    height: 44px;
+  }
+  .forget-password-input-row .forget-input {
+    font-size: 1rem;
+    height: 32px;
+    padding: 0 4px;
+  }
+  .forget-password-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+  .forget-header-row {
+    top: 12px;
+    left: 12px;
+    font-size: 0.95rem;
+    gap: 3px;
+  }
+  .forget-otp-row {
+    gap: 10px;
+    margin: 16px 0 20px 0;
+  }
+  .forget-otp-input {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+  .forget-desc {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+}

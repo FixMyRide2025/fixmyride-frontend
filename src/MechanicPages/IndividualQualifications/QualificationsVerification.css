@@ -180,6 +180,15 @@ body, html, * {
   font-weight: 500;
 }
 
+.business-desc-divider {
+  border: none;
+  border-top: 1.5px solid #e6e8ec;
+  margin-bottom: 24px;
+  margin-left: 50px;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
 .qualifications-step {
   color: #8692a6;
   font-size: 0.95rem;

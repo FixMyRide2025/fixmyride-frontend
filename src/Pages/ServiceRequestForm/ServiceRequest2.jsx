@@ -12,25 +12,45 @@ const breakdowns = [
   { label: "Overheating", icon: "/images/Overheating.png" },
   { label: "Break issues", icon: "/images/Break issues.png" },
   { label: "Starter Issue", icon: "/images/Starter Issue.png" },
-  { label: "Unknown Issue", icon: "/images/Unknown Issue.png" }
+  { label: "Unknown Issue", icon: "/images/Unknown Issue.png" },
 ];
 
 const ServiceRequest2 = () => {
   const [selectedBreakdown, setSelectedBreakdown] = useState(null);
+  const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
+
+  const handleNext = () => {
+    if (selectedBreakdown === null) {
+      setErrorMsg("Please Select Breakdown");
+      return;
+    }
+    const step2Payload = {
+      breakDownType: breakdowns[selectedBreakdown].label,
+    };
+    localStorage.setItem("sr_step2", JSON.stringify(step2Payload));
+    navigate("/servicerequest3");
+  };
 
   return (
     <div className="service-request1-container">
+      {errorMsg && <div className="top-toast-error">{errorMsg}</div>}
       <Navbar />
       <main>
         <h1 className="main-title">Select Breakdown</h1>
         <p className="main-subtitle">Options that you can choose</p>
+
         <div className="breakdown-grid">
           {breakdowns.map((item, idx) => (
             <div
               key={item.label}
-              className={`breakdown-card${selectedBreakdown === idx ? " active" : ""}`}
-              onClick={() => setSelectedBreakdown(idx)}
+              className={`breakdown-card${
+                selectedBreakdown === idx ? " active" : ""
+              }`}
+              onClick={() => {
+                setSelectedBreakdown(idx);
+                if (errorMsg) setErrorMsg("");
+              }}
             >
               <div className="breakdown-icon">
                 <img src={item.icon} alt={item.label} />
@@ -40,9 +60,14 @@ const ServiceRequest2 = () => {
             </div>
           ))}
         </div>
+
         <div className="navigation-row">
-          <button className="nav-btn" onClick={() => navigate("/servicerequest1")}>← Back</button>
-          <button className="nav-btn" onClick={() => navigate("/servicerequest3")}>Next →</button>
+          <button className="nav-btn" onClick={() => navigate("/servicerequest1")}>
+            ← Back
+          </button>
+          <button className="nav-btn" onClick={handleNext}>
+            Next →
+          </button>
         </div>
       </main>
       <Footer />

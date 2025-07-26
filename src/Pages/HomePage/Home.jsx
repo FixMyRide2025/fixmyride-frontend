@@ -26,7 +26,7 @@ const HomePage = () => (
             <div className="contact-info">
               <img src="/images/phone-call 1.png" alt="Phone" className="phone-icon" />
               <div>
-                <span className="contact-number">123 456 789 0</span>
+                <span className="contact-number">1980</span>
                 <span className="contact-label">24x7 EMERGENCY ASSISTANCE</span>
               </div>
             </div>

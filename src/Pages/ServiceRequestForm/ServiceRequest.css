@@ -140,7 +140,7 @@ main {
 }
 
 .vehicle-type-divider {
-  width: 220%;
+  width: 190%;
   height: 1px;
   background: #eaeaea;
   margin: 6px 0 0 0;
@@ -532,6 +532,7 @@ main {
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   justify-content: center;
   text-align: center;
+  /* margin-bottom removed for perfect vertical centering */
 }
 
 .modal-logo-row {
@@ -589,6 +590,24 @@ main {
 
 .modal-cancel-btn:hover {
   background: #2d4baf;
+}
+
+/* Top toast error message for ServiceRequest1 */
+.top-toast-error {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d32f2f;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 0 0 8px 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  text-align: center;
+  letter-spacing: 0.01em;
 }
 
 /* --- Responsive Design: Mobile Media Queries --- */
