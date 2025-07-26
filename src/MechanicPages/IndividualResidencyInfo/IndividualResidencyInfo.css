@@ -1,0 +1,478 @@
+
+.residency-register-container {
+  display: flex;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.residency-left {
+  background: #000;
+  color: #fff;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 150px 80px 48px 40px;
+  position: relative;
+}
+
+.residency-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.residency-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.residency-brand {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.residency-quote-icon {
+  font-size: 80px;
+  color: #3ec3e0;
+  margin-bottom: 0;
+}
+
+.residency-quote {
+  font-size: 18px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+.residency-quote-author {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.residency-verified {
+  color: #3ec3e0;
+  font-size: 1.1rem;
+}
+
+.residency-quote-corner {
+  position: absolute;
+  bottom: 450px;
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid #fff;
+  border-radius: 2px;
+}
+
+.residency-right {
+  width: 60%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 48px 0 48px;
+  position: relative;
+}
+
+.residency-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.residency-back-link {
+  color: #888;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.residency-step {
+  color: #8692a6;
+  font-size: 0.95rem;
+  font-weight: 200;
+  text-align: right;
+}
+
+.residency-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 24px;
+  color: #222;
+  text-align: left;
+  margin-left: 75px;
+}
+
+.residency-desc {
+  color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+  text-align: left;
+  margin-left: 75px;
+}
+
+.residency-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 18px;
+  margin-left: 80px;
+}
+
+.residency-form label {
+  color: #222;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 1px;
+}
+
+.residency-form input {
+  background: #fff;
+  border: 1.5px solid #8692a6;
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 10px;
+  margin-top: 0;
+  outline: none;
+  transition: border 0.2s;
+  max-width: 400px;
+  width: 100%;
+}
+
+.residency-province-select,
+.residency-district-select {
+  background: #fff;
+  border: 1.5px solid #8692a6;
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 12px;
+  margin-top: 0;
+  outline: none;
+  transition: border 0.2s;
+  max-width: 442px;
+  width: 100%;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+.residency-form input:focus,
+.residency-form select:focus,
+.residency-province-select:focus,
+.residency-district-select:focus {
+  border: 1.5px solid #1565D8;
+  box-shadow: 0 3px 8px rgba(98, 106, 120, 0.18);
+}
+
+.residency-btn {
+  background: #3279F5;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.residency-btn:hover {
+  background: #213b9c;
+}
+
+.residency-info-secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  margin-top: 8px;
+  gap: 6px;
+}
+
+/* Container for input and button */
+.residency-upload-input-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Input box styling */
+.residency-upload-input-with-icon {
+  padding-right: 40px; /* Make space for the icon */
+}
+
+/* Button styling */
+.residency-upload-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Align it inside the input */
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional hover effect for the button */
+.residency-upload-btn:hover {
+  opacity: 0.8;
+}
+
+/* Adjust the icon size */
+.residency-upload-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #8692a6;
+}
+
+
+/* .residency-upload-input-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.residency-upload-input-with-icon {
+  padding-right: 90px; 
+}
+
+.residency-upload-svg-inside {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+}
+
+.residency-info-lock-svg {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+} */
+
+/* bank verification */
+.bank-quote-corner{
+  position: absolute;
+  bottom: 150px;
+  right: 32px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid #fff;
+  border-radius: 2px;
+}
+
+/* For larger screens (e.g., desktops or large tablets) */
+@media screen and (max-width: 1200px) {
+  .residency-register-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .residency-left,
+  .residency-right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .residency-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .residency-desc {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .residency-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .residency-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .residency-google-btn {
+    width: 100%;
+    height: 56px;
+  }
+
+  .residency-phone-row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .residency-phone-country {
+    width: 100%;
+  }
+
+  .residency-field {
+    margin-bottom: 10px;
+  }
+
+  .residency-checkbox-row {
+    margin-bottom: 10px;
+  }
+
+  .residency-upload-btn {
+    width: 100%;
+    height: 48px;
+  }
+}
+
+/* For tablets or smaller screens (e.g., medium devices) */
+@media screen and (max-width: 768px) {
+  .residency-register-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .residency-left,
+  .residency-right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .residency-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .residency-desc {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .residency-form {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .residency-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .residency-google-btn {
+    width: 100%;
+    height: 48px;
+  }
+
+  .residency-phone-row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .residency-phone-country {
+    width: 100%;
+  }
+
+  .residency-field {
+    margin-bottom: 8px;
+  }
+
+  .residency-checkbox-row {
+    margin-bottom: 8px;
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .residency-register-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .residency-left,
+  .residency-right {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .residency-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .residency-desc {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .residency-form {
+    width: 100%;
+    padding: 6px;
+  }
+
+  .residency-btn {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .residency-google-btn {
+    width: 100%;
+    height: 44px;
+  }
+
+  .residency-phone-row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .residency-phone-country {
+    width: 100%;
+  }
+
+  .residency-field {
+    margin-bottom: 6px;
+  }
+
+  .residency-checkbox-row {
+    margin-bottom: 6px;
+  }
+
+  .residency-upload-btn {
+    width: 100%;
+    height: 40px;
+  }
+}

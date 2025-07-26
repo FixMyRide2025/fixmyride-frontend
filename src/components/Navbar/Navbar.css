@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap');
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  color: #fff;
+  padding: 1px 46px;
+  font-family: 'Figtree', sans-serif;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.car-logo {
+  width: 32px;
+  height: 32px;
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.navbar-center {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+}
+.navbar-center li {
+  font-style: bold;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+.navbar-center .active {
+  background: #fff;
+  color: #111;
+  border-radius: 12px;
+}
+.navbar-center .active .navbar-link {
+  color: #111;
+}
+.navbar-center li:hover {
+  background: #fff;
+  color: #111;
+}
+.navbar-center li,
+.navbar-center .navbar-link {
+  color: #fff;
+}
+.navbar-right {
+  display: flex;
+  gap: 35px;
+}
+.icon {
+  width: 32px;
+  height: 35px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+.icon:hover {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(91%) saturate(747%) hue-rotate(199deg) brightness(97%) contrast(95%);
+}
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-style: bold;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+.navbar-link:hover {
+  color: #111;
+  /* background: #fff; */
+  border-radius: 12px;
+}
+.active-icon-bg {
+  width: 35px; /* Large white circle */
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #222;
+}
+
+.active-icon-bg .icon {
+  width: 25px;   /* Smaller logo inside */
+  height: 25px;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+
+
+/* --- Responsive Design: Navbar Mobile Media Queries --- */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 10px;
+    gap: 10px;
+  }
+  .navbar-left {
+    gap: 8px;
+  }
+  .car-logo {
+    width: 26px;
+    height: 26px;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+  .navbar-center {
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+  }
+  .navbar-center li {
+    font-size: 0.95rem;
+    padding: 4px 7px;
+  }
+  .navbar-link {
+    font-size: 0.95rem;
+    padding: 4px 7px;
+  }
+  .navbar-right {
+    gap: 12px;
+  }
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+  .active-icon-bg {
+    width: 28px;
+    height: 28px;
+  }
+  .active-icon-bg .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 6px 2vw;
+    gap: 6px;
+  }
+  .navbar-center {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 0.3rem 0;
+  }
+  .navbar-right {
+    gap: 8px;
+  }
+}
+
+
+
+
